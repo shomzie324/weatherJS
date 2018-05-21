@@ -9,21 +9,6 @@ console.log(weatherLocation.locationString);
 // Init weather class
 const weather = new Weather("en-us", weatherLocation.locationString);
 
-// get location code 
-// TODO: figure out why the data from the promise can be logged but nothing else
-// var code;
-// weather.getLocationCode()
-// .then(console.log(data))
-// .catch(err => console.log(err));
-
-// async function getCode() {
-//     let codes = await weather.getLocationCode();
-//     return codes[0].Key;
-// }
-
-// getCode().then(res => console.log(res));
-
-
 // init UI Controller
 const ui = new UI();
 

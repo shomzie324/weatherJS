@@ -7,7 +7,7 @@ class Weather {
 
     }
 
-    // Get location code from API to use for getWeather function
+    // Get location code from Accu Weather text search API to use for getWeather function
 
     async getLocationCode() {
         const response = await fetch(`http://dataservice.accuweather.com/locations/v1/search?apikey=${this.apiKey}&q=${this.locationString}&language=${this.language}`);
@@ -18,11 +18,7 @@ class Weather {
     // Get weather from API
 
     async getWeather(cityCode) {
-
-        // cityCode is a promise, need to get data inside but trying use .then
-        // and a function that then makes the next request doesn't work
-        // because await can't be used outside of an async function and
-        // the .then function isn't async
+        // get the key from the cityCode object (contains multiple possible results from the text search)
         const key = cityCode[0].Key;
         console.log(key);
 
