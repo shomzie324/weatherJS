@@ -2,4 +2,4 @@ This application is a weather app that uses the Accu Weather API to get current 
 
 Tech Used: html, css, js (es6 syntax), fetch API, Accu Weather API
 
-Note: Free API key is being used that has a limited number of daily API calls. If a 503 errored is received that is probably why.
+Note: Free API key is being used that has a limited number of daily API calls. If a 503 error is received that is probably why.
