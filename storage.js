@@ -16,9 +16,11 @@ class Storage {
         return {
             locationString: this.locationString
         }
+
     }
 
     setLocationData(locationString){
         localStorage.setItem('locationString', locationString);
+        console.log("Preferences saved to local storage.");
     }
 }

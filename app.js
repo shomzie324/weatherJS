@@ -4,7 +4,7 @@ const storage = new Storage();
 // get stored location data
 const weatherLocation = storage.getLocationData();
 
-console.log(weatherLocation.locationString);
+console.log("The location string is: " + weatherLocation.locationString);
 
 // Init weather class
 const weather = new Weather("en-us", weatherLocation.locationString);
@@ -21,11 +21,11 @@ document.getElementById("w-change-button").addEventListener('click', (e) => {
     const country = document.getElementById("country").value;
     const locationString = `${city}, ${country}`;
 
-    // change location
-    weather.changeLocation("en-us", locationString);
-
     // set location in local storage
     storage.setLocationData(locationString);
+
+    // change location
+    weather.changeLocation("en-us", locationString);
 
     // Get and show new weather
     getWeather();
